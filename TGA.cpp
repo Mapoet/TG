@@ -13,6 +13,20 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/weak_ptr.hpp>
 
+namespace TGA
+{
+template<typename V>
+using shared_ptr=boost::shared_ptr<V>;
+template<typename V>
+using weak_ptr=boost::weak_ptr<V>;
+template<typename K,typename V>
+using unordered_map=boost::unordered_map<K,V>;
+
+
+} // namespace TGA
+
+template<typename V>
+using shared_ptr=boost::shared_ptr<V>;
 
 
 
