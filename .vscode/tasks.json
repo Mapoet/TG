@@ -1,0 +1,41 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++-8 build active file",
+            "command": "/usr/bin/g++-8",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I/usr/include/eigen3/unsupported",
+                "-I/usr/include/eigen3",
+                "-g","-ljsoncpp","-lboost_serialization","-lboost_filesystem","-lboost_system",
+                "-std=c++17"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            }
+        },
+        {
+            "type": "shell",
+            "label": "g++-8 build file",
+            "command": "/usr/bin/g++-8",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I/usr/include/eigen3/unsupported",
+                "-I/usr/include/eigen3",
+                "-g","-ljsoncpp",
+                "-std=c++17"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
